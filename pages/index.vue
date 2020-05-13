@@ -15,8 +15,8 @@
     >
       <div class="title">
         <img
-          :class="{ invert: !initialSequenceDone }"
-          class="first-page-name m-auto"
+          :class="{ 'no-invert': secondSequenceDone }"
+          class="first-page-name m-auto invert"
           src="~/assets/sayamhussain.webp"
         />
         <h3 class="animated fadeInUp slow delay-4s first-page-title mt-1">
@@ -81,6 +81,9 @@ export default {
   mounted() {
     setTimeout(() => {
       this.initialSequenceDone = true;
+    }, 3000);
+    setTimeout(() => {
+      this.secondSequenceDone = true;
     }, 2000);
   }
 };
@@ -207,11 +210,16 @@ html {
   animation-delay: 0.5s;
 }
 .invert {
-  -moz-transition: background 1s ease-in;
-  -o-transition: background 1s ease-in;
-  -webkit-transition: background 1s ease-in;
-  transition: background 1s ease-in;
   filter: invert(100%);
+}
+.no-invert {
+  -webkit-transition-delay: 2s;
+  transition-delay: 2s;
+  -moz-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  filter: invert(0%) !important;
 }
 .first-page {
   -moz-transition: background 2s ease-in;
