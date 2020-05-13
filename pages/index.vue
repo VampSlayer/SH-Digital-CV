@@ -1,9 +1,27 @@
 <template>
   <div class="h-100">
-    <div class="first-page">
-      <div class="title animated fadeIn slower">
-        <img class="first-page-name m-auto" src="~/assets/sayamhussain.png" />
-        <h3 class="first-page-title m-0">Full Stack Developer</h3>
+    <!-- <div class="zero-page" v-if="!initialSequenceDone">
+      <div class="title">
+        <img
+          class="animated fadeIn slower delay-half-s first-page-name m-auto"
+          style="filter:invert(100%)"
+          src="~/assets/sayamhussain.webp"
+        />
+      </div>
+    </div> -->
+    <div
+      class="zero-page animated slideInDown slow"
+      :class="{ 'first-page': initialSequenceDone }"
+    >
+      <div class="title">
+        <img
+          :class="{ invert: !initialSequenceDone }"
+          class="first-page-name m-auto"
+          src="~/assets/sayamhussain.webp"
+        />
+        <h3 class="animated fadeInUp slow delay-4s first-page-title mt-1">
+          Full Stack Developer
+        </h3>
       </div>
     </div>
     <div class="parallax">
@@ -42,6 +60,7 @@ import TurndownService from "turndown";
 export default {
   data() {
     return {
+      initialSequenceDone: false,
       style: "third",
       length: "medium",
       mins: "",
@@ -58,6 +77,11 @@ export default {
     // for me markdown will probs look the same as plain text lol
     const turndownService = new TurndownService();
     this.mark = turndownService.turndown(this.info);
+  },
+  mounted() {
+    setTimeout(() => {
+      this.initialSequenceDone = true;
+    }, 2000);
   }
 };
 </script>
@@ -68,6 +92,7 @@ html {
   height: 100%;
 }
 * {
+  font-family: "DM Mono", monospace;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility !important;
@@ -96,8 +121,12 @@ html {
 </style>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap");
+</style>
+
+<style>
 .first-page-name {
-  width: 60%;
+  width: 47.5%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -158,7 +187,7 @@ html {
   color: #5d5d5d;
   text-align: center;
 }
-.first-page {
+.zero-page {
   min-height: 100vh;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -166,11 +195,29 @@ html {
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #afafaf;
+  background-color: white;
   position: fixed;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 100vh;
+}
+.animated.delay-half-s {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.invert {
+  -moz-transition: background 1s ease-in;
+  -o-transition: background 1s ease-in;
+  -webkit-transition: background 1s ease-in;
+  transition: background 1s ease-in;
+  filter: invert(100%);
+}
+.first-page {
+  -moz-transition: background 2s ease-in;
+  -o-transition: background 2s ease-in;
+  -webkit-transition: background 2s ease-in;
+  transition: background 2s ease-in;
+  background: #afafaf !important;
 }
 </style>
