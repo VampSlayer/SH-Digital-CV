@@ -12,7 +12,7 @@ export default {};
 
 <style scoped>
 #group-1 {
-  margin-top: 200vh;
+  margin-top: 100vh;
   z-index: 5;
 }
 #group-1 .layer-base {

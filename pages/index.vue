@@ -1,6 +1,6 @@
 <template>
   <div class="h-100">
-    <zero-page v-on:sequences-done="sequencesDone=true"></zero-page>
+    <zero-page v-on:sequences-done="sequencesDone = true"></zero-page>
     <parallax-container v-if="sequencesDone"></parallax-container>
   </div>
 </template>
