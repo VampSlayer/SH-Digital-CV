@@ -4,7 +4,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Sayam Hussain',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -14,7 +14,7 @@ module.exports = {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
   },
   /*
    ** Customize the progress-bar color
@@ -24,7 +24,10 @@ module.exports = {
    ** Global CSS
    */
   css: [
-    'animate.css'
+    'animate.css',
+    '~/assets/style.scss',
+    '~/assets/parallax.scss',
+    '~/assets/dm-mono.css'
   ],
   /*
    ** Plugins to load before mounting the App
@@ -43,8 +46,8 @@ module.exports = {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
-    'reading-time',
-    'turndown'
+    //'reading-time',
+    //'turndown'
   ],
   /*
    ** Build configuration

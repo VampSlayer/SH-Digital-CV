@@ -19,6 +19,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    "vue/v-on-style": ["error", "longform"],
     'nuxt/no-cjs-in-config': 'off'
   }
 }
