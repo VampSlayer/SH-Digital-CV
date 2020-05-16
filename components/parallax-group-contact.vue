@@ -7,7 +7,7 @@
           href="https://www.linkedin.com/in/sayam-hussain-52475210b/"
           ><font-awesome-icon :icon="['fab', 'linkedin']"
         /></a>
-        <a target="_blank" href="https://github.com/VampSlayer/CivMoney"
+        <a target="_blank" href="https://github.com/VampSlayer/"
           ><font-awesome-icon :icon="['fab', 'github']"
         /></a>
         <a target="_blank" href="https://www.instagram.com/vampire_slayer69/"

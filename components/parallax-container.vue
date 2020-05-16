@@ -4,7 +4,9 @@
       <div class="container-fluid">
         <div class="row animated fadeInUp slow delay-1s zero-page-title mt-1">
           <div class="col-2 text-left">
-            <a href="#" v-on:click="debug = !debug"><h4>Show Parallax</h4></a>
+            <a href="#" v-on:click="debug = !debug"
+              ><h4>{{ debug ? "Hide" : "Show" }} Parallax</h4></a
+            >
           </div>
           <div class="col-1 offset-9 text-right">
             <a href="#" v-on:click="scrollTo('contact', 3500)"
