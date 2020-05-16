@@ -1,32 +1,32 @@
 <template>
-  <div id="group-2" class="group">
+  <div id="momentum" class="group">
     <div class="layer layer-base">
       <div class="sh-center">Momentum Dash</div>
     </div>
     <div class="layer layer-back">
       <div class="sh-center">
-        <logo></logo>
+        <img class="momentum-logo mr-2" src="~/assets/momentum.png" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from "./logo";
 export default {
-  name: "ParallaxGroup2",
-  components: {
-    Logo
-  }
+  name: "Momentum"
 };
 </script>
 
-<style lang="scss" scoped>
-#group-2 {
-  z-index: 3;
+<style scoped lang="scss">
+#momentum {
+  z-index: 4;
 
   .layer-back {
     background: white;
+  }
+
+  .momentum-logo {
+    filter: invert(3%);
   }
 }
 </style>

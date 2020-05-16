@@ -21,7 +21,8 @@
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
     "reading-time": "^1.2.0",
-    "turndown": "^6.0.0"
+    "turndown": "^6.0.0",
+    "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",

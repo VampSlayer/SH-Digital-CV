@@ -5,9 +5,9 @@
   >
     <div class="sh-center">
       <logo :invert="true" :class="{ 'no-invert': secondSequenceDone }"></logo>
-      <h3 class="animated fadeInUp slow delay-4s zero-page-title mt-1">
-        Full Stack Developer
-      </h3>
+      <div class="animated fadeInUp slow delay-4s zero-page-title mt-1">
+        <h3>Full Stack Developer</h3>
+      </div>
     </div>
   </div>
 </template>
@@ -68,6 +68,7 @@ export default {
   transition: all 1s ease-in;
   filter: invert(0%) !important;
 }
+
 .first-sequence-done {
   -moz-transition: background 1s ease-in;
   -o-transition: background 1s ease-in;
