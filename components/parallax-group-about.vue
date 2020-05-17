@@ -24,7 +24,7 @@
                     <footer class="blockquote-footer time-line-title">
                       <img
                         class="logo uol mr-1"
-                        src="~/assets/uol.png"
+                        src="~/assets/uol-3.png"
                       />University of Liverpool, MPhys
                     </footer>
                   </blockquote>
@@ -177,7 +177,7 @@ export default {
     filter: brightness(0) invert(1);
   }
   .uol {
-    width: 5%;
+    width: 3%;
   }
   .civ-money-logo {
     width: 13%;

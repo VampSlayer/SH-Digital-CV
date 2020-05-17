@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="layer layer-back">
-      <img class="uol-logo mr-2" src="~/assets/uol.png" />
+      <img class="uol-logo mr-2" src="~/assets/uol-3.png" />
     </div>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
   }
 
   .uol-logo {
-    width: 20%;
+    width: 18%;
     position: absolute;
     left: 50%;
     top: 50%;
