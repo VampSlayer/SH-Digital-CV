@@ -47,7 +47,9 @@ module.exports = {
     // Doc: https://bootstrap-vue.js.org
     "bootstrap-vue/nuxt",
     // Doc: https://vue-scrollto.netlify.app/docs/#nuxt-js
-    'vue-scrollto/nuxt',
+    "vue-scrollto/nuxt",
+    // Doc: https://github.com/nuxt-community/modules/tree/master/packages/markdownit
+    "@nuxtjs/markdownit",
     // Doc: https://github.com/vaso2/nuxt-fontawesome#readme
     [
       "nuxt-fontawesome",
@@ -60,8 +62,6 @@ module.exports = {
         ]
       }
     ]
-    //'reading-time',
-    //'turndown'
   ],
   /*
    ** Build configuration

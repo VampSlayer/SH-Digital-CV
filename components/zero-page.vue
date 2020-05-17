@@ -1,6 +1,6 @@
 <template>
   <div
-    class="zero-page animated slideInDown slow"
+    class="zero-page animated fadeIn slowest"
     :class="{ 'first-sequence-done': firstSequenceDone }"
   >
     <div class="sh-center">

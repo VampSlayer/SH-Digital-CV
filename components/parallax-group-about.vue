@@ -2,9 +2,13 @@
   <div id="about" class="group">
     <div class="layer layer-base">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row mr-2">
           <!-- <div class="col text-left mt-4 pl-5">Navigation</div> -->
-          <div class="col-2 offset-10 text-right mt-4 pr-5">About</div>
+          <div class="col-2 offset-10 mt-4 text-right sh-pointer">
+            <span v-on:click="toggleBioLength"
+              ><span class="tldr">click tl;dr</span> About</span
+            >
+          </div>
         </div>
         <div class="row ml-1 mr-2">
           <div class="col-6">
@@ -100,38 +104,9 @@
               </div>
             </div>
           </div>
-          <div class="col-6">
-            <div class="row">
-              <div class="col text-right bio">
-                <p>
-                  From they fine john he give of rich he. They age and draw mrs
-                  like. Improving end distrusts may instantly was household
-                  applauded incommode. Why kept very ever home mrs. Considered
-                  sympathize ten uncommonly occasional assistance sufficient
-                  not. Letter of on become he tended active enable to. Vicinity
-                  relation sensible sociable surprise screened no up as.
-                </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-10 offset-2 text-right bio">
-                <p>
-                  From they fine john he give of rich he. They age and draw mrs
-                  like. Improving end distrusts may instantly was household
-                  applauded incommode. Why kept very ever home mrs.
-                </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-8 offset-4 text-right bio">
-                <p>
-                  From they fine john he give of rich he. They age and draw mrs
-                  like. Improving end distrusts may instantly was household
-                  applauded incommode. Why kept very ever home mrs.
-                </p>
-              </div>
-            </div>
-          </div>
+          <bio-long v-if="bio === 'long'"></bio-long>
+          <bio-medium v-if="bio === 'medium'"></bio-medium>
+          <bio-short v-if="bio === 'short'"></bio-short>
         </div>
       </div>
     </div>
@@ -139,14 +114,39 @@
 </template>
 
 <script>
+import BioLong from "./bios/bio-long";
+import BioMedium from "./bios/bio-medium";
+import BioShort from "./bios/bio-short";
+
 export default {
   name: "About",
+  components: {
+    BioLong,
+    BioMedium,
+    BioShort
+  },
+  data() {
+    return {
+      bio: "long"
+    };
+  },
   methods: {
     scrollTo(element, speed) {
       this.$scrollTo(`#${element}`, speed, {
         easing: "ease",
         container: "#parallax-container"
       });
+    },
+    toggleBioLength() {
+      debugger;
+      const lengths = ["long", "medium", "short"];
+      let currentLengthIndex = lengths.findIndex((x) => x === this.bio);
+      if (currentLengthIndex === 2) {
+        currentLengthIndex = 0;
+      } else {
+        currentLengthIndex += 1;
+      }
+      this.bio = lengths[currentLengthIndex];
     }
   }
 };
@@ -170,10 +170,6 @@ export default {
     font-size: 1em;
   }
 
-  .bio {
-    font-size: 0.8em;
-  }
-
   .blockquote-footer:before {
     content: none;
   }
@@ -193,6 +189,9 @@ export default {
   }
   a {
     color: inherit !important;
+  }
+  .tldr {
+    font-size: 0.4em;
   }
 }
 </style>

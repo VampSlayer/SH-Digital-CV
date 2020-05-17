@@ -21,3 +21,20 @@ html {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+.slowest {
+  -webkit-animation-duration: 5s !important;
+  animation-duration: 5s !important;
+}
+
+.sh-pointer {
+  cursor: pointer;
+}
+
+.bio {
+  font-size: 0.5em;
+  a {
+    color: white;
+    font-weight: bold;
+  }
+}
