@@ -3,10 +3,12 @@
     <div class="layer layer-base">
       <div class="container-fluid">
         <div class="row mr-2">
-          <!-- <div class="col text-left mt-4 pl-5">Navigation</div> -->
-          <div class="col-2 offset-10 mt-4 text-right sh-pointer">
-            <span v-on:click="toggleBioLength"
-              ><span class="tldr">click tl;dr</span> About</span
+          <div class="col-2 offset-10 mt-4 text-right">
+            <span
+              ><a href="#" class="tldr sh-pointer" v-on:click="toggleBioLength"
+                >click tl;dr</a
+              >
+              About</span
             >
           </div>
         </div>
@@ -14,7 +16,7 @@
           <div class="col-6">
             <div class="row">
               <div class="col">
-                <a href="#" v-on:click="scrollTo('uol', 3000)">
+                <a v-scroll-to="{ el: '#uol', duration: 3000 }" href="#">
                   <blockquote class="blockquote text-left">
                     <p class="m-0 time-line-year">
                       2015
@@ -31,7 +33,10 @@
             </div>
             <div class="row">
               <div class="col offset-2">
-                <a href="#" v-on:click="scrollTo('credit-suisse', 2500)">
+                <a
+                  v-scroll-to="{ el: '#credit-suisse', duration: 2500 }"
+                  href="#"
+                >
                   <blockquote class="blockquote text-left">
                     <p class="m-0 time-line-year">
                       2015-2017
@@ -46,7 +51,7 @@
             </div>
             <div class="row">
               <div class="col offset-4">
-                <a href="#" v-on:click="scrollTo('interact', 2000)">
+                <a v-scroll-to="{ el: '#interact', duration: 2000 }" href="#">
                   <blockquote class="blockquote text-left">
                     <p class="m-0 time-line-year">
                       2018-2019
@@ -63,7 +68,7 @@
             </div>
             <div class="row">
               <div class="col offset-6">
-                <a href="#" v-on:click="scrollTo('momentum', 1000)">
+                <a v-scroll-to="{ el: '#momentum', duration: 1000 }" href="#">
                   <blockquote class="blockquote text-left">
                     <p class="m-0 time-line-year">
                       2019-
@@ -80,7 +85,7 @@
             </div>
             <div class="row">
               <div class="col offset-8">
-                <a href="#" v-on:click="scrollTo('civ-money', 1500)">
+                <a v-scroll-to="{ el: '#civ-money', duration: 1500 }" href="#">
                   <blockquote class="blockquote text-left">
                     <footer class="blockquote-footer time-line-title">
                       <img
@@ -94,7 +99,7 @@
             </div>
             <div class="row">
               <div class="col offset-9">
-                <a href="#" v-on:click="scrollTo('contact', 3500)">
+                <a v-scroll-to="{ el: '#civ-money', duration: 3500 }" href="#">
                   <blockquote class="blockquote text-left">
                     <footer class="blockquote time-line-title">
                       Contact Sayam
@@ -131,14 +136,7 @@ export default {
     };
   },
   methods: {
-    scrollTo(element, speed) {
-      this.$scrollTo(`#${element}`, speed, {
-        easing: "ease",
-        container: "#parallax-container"
-      });
-    },
     toggleBioLength() {
-      debugger;
       const lengths = ["long", "medium", "short"];
       let currentLengthIndex = lengths.findIndex((x) => x === this.bio);
       if (currentLengthIndex === 2) {
@@ -155,11 +153,11 @@ export default {
 <style scoped lang="scss">
 #about {
   margin-top: 100vh;
+  color: white;
   z-index: 5;
 
   .layer-base {
     background: black;
-    color: white;
   }
 
   .time-line-year {

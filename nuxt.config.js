@@ -32,7 +32,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["~plugins/vue-scrollto.js"],
+  plugins: [],
   /*
    ** Nuxt.js dev-modules
    */
@@ -47,7 +47,7 @@ module.exports = {
     // Doc: https://bootstrap-vue.js.org
     "bootstrap-vue/nuxt",
     // Doc: https://vue-scrollto.netlify.app/docs/#nuxt-js
-    "vue-scrollto/nuxt",
+    ["vue-scrollto/nuxt", { container: "#parallax-container" }],
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/markdownit
     "@nuxtjs/markdownit",
     // Doc: https://github.com/vaso2/nuxt-fontawesome#readme

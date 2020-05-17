@@ -9,7 +9,7 @@
             >
           </div>
           <div class="col-1 offset-9 text-right">
-            <a href="#" v-on:click="scrollTo('contact', 3500)"
+            <a v-scroll-to="{ el: '#contact', duration: 3500 }" href="#"
               ><h4>Contact</h4></a
             >
           </div>
@@ -50,15 +50,6 @@ export default {
     return {
       debug: false
     };
-  },
-  methods: {
-    // TODO This is duplicate of method in about. Need to refactor
-    scrollTo(element, speed) {
-      this.$scrollTo(`#${element}`, speed, {
-        easing: "ease",
-        container: "#parallax-container"
-      });
-    }
   }
 };
 </script>

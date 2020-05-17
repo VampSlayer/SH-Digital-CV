@@ -9,7 +9,7 @@
         <p>
           At the end of the program, Sayam obtained a position as third level
           support at
-          <a target="_blank" href="https://www.credit-suisse.com/"
+          <a v-scroll-to="{ el: '#credit-suisse', duration: 2500 }" href="#"
             >Credit Suisse</a
           >
           in Zurich. He moved to Junior developer after the first year.
@@ -20,13 +20,15 @@
       <div class="col-10 offset-2">
         <p>
           Moving back to Manchester he became a developer at
-          <a target="_blank" href="https://www.interact-intranet.com/"
+          <a v-scroll-to="{ el: '#interact', duration: 2000 }" href="#"
             >Interact Software</a
           >. Here he worked and led on two greenfield projects.
         </p>
         <p>
           After that role Sayam moved to Canada and obtained a developer role at
-          <a target="_blank" href="https://momentumdash.com/">Momentum Dash</a>.
+          <a v-scroll-to="{ el: '#momentum', duration: 1000 }" href="#"
+            >Momentum Dash</a
+          >.
         </p>
       </div>
     </div>

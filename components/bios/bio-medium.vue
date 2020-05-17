@@ -4,7 +4,7 @@
       <div class="col-12">
         <p>
           Sayam graduated from the
-          <a target="_blank" href="https://www.liverpool.ac.uk/"
+          <a v-scroll-to="{ el: '#uol', duration: 3000 }" href="#"
             >University of Liverpool</a
           >
           in 2015, with a Master’s of Physics, where his interest in programming
@@ -14,7 +14,7 @@
         </p>
         <p>
           At the end of the program, Sayam obtained a position at
-          <a target="_blank" href="https://www.credit-suisse.com/"
+          <a v-scroll-to="{ el: '#credit-suisse', duration: 2500 }" href="#"
             >Credit Suisse</a
           >
           in Zurich. In third level support Sayam debugged many legacy systems
@@ -27,7 +27,7 @@
       <div class="col-10 offset-2">
         <p>
           Moving back home to Manchester, he developed for
-          <a target="_blank" href="https://www.interact-intranet.com/"
+          <a v-scroll-to="{ el: '#interact', duration: 2000 }" href="#"
             >Interact Software</a
           >, an Intranet maker. Here he worked on two projects; building third
           party integrations into the current system, and a surveying tool.
@@ -35,9 +35,10 @@
         <p>
           Wanting to travel, Sayam moved to Canada and obtained a developer role
           at
-          <a target="_blank" href="https://momentumdash.com/">Momentum Dash</a>,
-          a new tab extension. At Momentum he is improving his front end skills
-          and learning about scalable web applications.
+          <a v-scroll-to="{ el: '#momentum', duration: 1000 }" href="#"
+            >Momentum Dash</a
+          >, a new tab extension. At Momentum he is improving his front end
+          skills and learning about scalable web applications.
         </p>
       </div>
     </div>
