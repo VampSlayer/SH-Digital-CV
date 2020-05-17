@@ -1,7 +1,23 @@
 <template>
   <div id="civ-money" class="group">
     <div class="layer layer-base">
-      <div class="sh-center">CivMoney</div>
+      <info-container
+        :name="'CivMoney'"
+        :shape="'square'"
+        :number-of-slides="3"
+        :dots-dark="true"
+      >
+        <template v-slot:1>
+          <div v-html="civMoney"></div>
+        </template>
+        <template v-slot:2>
+          <iframe
+            height="700vh"
+            width="100%"
+            src="https://www.civmoney.com/#/login"
+          ></iframe>
+        </template>
+      </info-container>
     </div>
     <div class="layer layer-back">
       <div>
@@ -12,8 +28,19 @@
 </template>
 
 <script>
+import CivMoney from "../assets/markdown/momentum-dash.md";
+import InfoContainer from "./info-container";
+
 export default {
-  name: "CivMoney"
+  name: "CivMoney",
+  components: {
+    InfoContainer
+  },
+  computed: {
+    civMoney() {
+      return CivMoney;
+    }
+  }
 };
 </script>
 

@@ -7,7 +7,7 @@
       href="#"
       :class="{ active: slide === index }"
       v-on:click="$emit('slide-change', index)"
-      ><font-awesome-icon :icon="['fas', 'circle']" />
+      ><font-awesome-icon :icon="['fas', shape]" />
     </a>
   </p>
 </template>
@@ -27,6 +27,10 @@ export default {
     dark: {
       type: Boolean,
       default: false
+    },
+    shape: {
+      type: String,
+      default: "circle"
     }
   }
 };
@@ -53,11 +57,11 @@ export default {
   }
 
   a {
-    color: #d4d4d4;
+    color: #bdbdbd;
   }
 
   a:hover {
-    color: rgb(165, 165, 165);
+    color: rgb(58, 58, 58);
   }
 }
 </style>
