@@ -103,7 +103,7 @@ export default {
     -o-transition: all 0.8s ease-in;
     -webkit-transition: all 0.8s ease-in;
     transition: all 0.8s ease-in;
-    margin-top: 50vh;
+    margin-top: 45vh;
 
     .dots {
       font-size: 0.5em;
