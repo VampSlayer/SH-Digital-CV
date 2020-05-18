@@ -1,7 +1,25 @@
 <template>
   <div id="credit-suisse" class="group">
     <div class="layer layer-base">
-      <div class="sh-center">Credit Suisse</div>
+      <info-container
+        :name="'Credit Suisse'"
+        :year="'2015-2017'"
+        :shape="'money-bill'"
+        :number-of-slides="3"
+        :dots-dark="true"
+      >
+        <template v-slot:1>
+          <div class="animated fadeIn" v-html="creditSuisse"></div>
+        </template>
+        <template v-slot:2>
+          <iframe
+            class="animated fadeIn slower"
+            height="700vh"
+            width="100%"
+            src="https://derivative.credit-suisse.com/ch/ch/en/"
+          ></iframe>
+        </template>
+      </info-container>
     </div>
     <div class="layer layer-back">
       <img class="credit-suisse-logo mr-2" src="~/assets/credit.png" />
@@ -10,8 +28,19 @@
 </template>
 
 <script>
+import CreditSuisse from "../assets/markdown/credit-suisse.md";
+import InfoContainer from "./info-container";
+
 export default {
-  name: "CreditSuisse"
+  name: "CreditSuisse",
+  components: {
+    InfoContainer
+  },
+  computed: {
+    creditSuisse() {
+      return CreditSuisse;
+    }
+  }
 };
 </script>
 

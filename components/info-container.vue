@@ -4,7 +4,9 @@
       <div class="col-6 offset-3 text-center">
         <div class="title-center" :class="{ 'no-title-center': slide !== 1 }">
           <h3 class="mt-0 mb-1">{{ name }}</h3>
-          <h6 class="year mt-1 mb-1">{{ year }}</h6>
+          <h6 class="year mt-1 mb-1" :class="{ 'year-dark': dotsDark }">
+            {{ year }}
+          </h6>
           <dots
             class="dots m-0 mb-1"
             :slide="slide"
@@ -13,11 +15,7 @@
             :dark="dotsDark"
             v-on:slide-change="slideChange"
           ></dots>
-          <div
-            v-for="index in numberOfSlides - 1"
-            :key="index"
-            class="text animated fadeIn slow"
-          >
+          <div v-for="index in numberOfSlides - 1" :key="index" class="text">
             <slot v-if="slide === index + 1" :name="index"></slot>
           </div>
         </div>
@@ -104,5 +102,9 @@ export default {
 
 .year {
   color: #5d5d5d;
+}
+
+.year-dark {
+  color: #bdbdbd;
 }
 </style>

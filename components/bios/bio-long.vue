@@ -1,5 +1,5 @@
 <template>
-  <div class="animated fadeIn col-6 text-right bio">
+  <div class="animated fadeIn col-6 text-right bio bio-long">
     <div class="row">
       <div class="col-12">
         <p>
@@ -84,3 +84,9 @@ export default {
   name: "BioLong"
 };
 </script>
+
+<style lang="scss" scoped>
+.bio-long {
+  font-size: 0.48em;
+}
+</style>

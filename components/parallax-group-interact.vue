@@ -1,7 +1,32 @@
 <template>
   <div id="interact" class="group">
     <div class="layer layer-base">
-      <div class="sh-center">Interact Software</div>
+      <info-container
+        :name="'Interact Software'"
+        :year="'2017-2019'"
+        :shape="'th-large'"
+        :number-of-slides="4"
+      >
+        <template v-slot:1>
+          <div class="animated fadeIn" v-html="interact"></div>
+        </template>
+        <template v-slot:2>
+          <iframe
+            class="animated fadeIn slower"
+            height="700vh"
+            width="100%"
+            src="https://www.interact-intranet.com/features/integrations/"
+          ></iframe>
+        </template>
+        <template v-slot:3>
+          <iframe
+            class="animated fadeIn slower"
+            height="700vh"
+            width="100%"
+            src="https://www.interact-intranet.com/features/pulse-surveys/"
+          ></iframe>
+        </template>
+      </info-container>
     </div>
     <div class="layer layer-back">
       <img class="interact-logo mr-2" src="~/assets/interact.png" />
@@ -10,8 +35,19 @@
 </template>
 
 <script>
+import Interact from "../assets/markdown/interact.md";
+import InfoContainer from "./info-container";
+
 export default {
-  name: "Interact"
+  name: "Interact",
+  components: {
+    InfoContainer
+  },
+  computed: {
+    interact() {
+      return Interact;
+    }
+  }
 };
 </script>
 

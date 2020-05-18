@@ -3,15 +3,16 @@
     <div class="layer layer-base">
       <info-container
         :name="'Momentum Dash'"
-        :year="'2019 -'"
+        :year="'2019-'"
         :shape="'circle'"
         :number-of-slides="3"
       >
         <template v-slot:1>
-          <div v-html="momentum"></div>
+          <div class="animated fadeIn" v-html="momentum"></div>
         </template>
         <template v-slot:2>
           <iframe
+            class="animated fadeIn slower"
             height="700vh"
             width="100%"
             src="https://momentumdash.com/"
