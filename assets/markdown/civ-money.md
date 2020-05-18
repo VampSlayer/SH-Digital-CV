@@ -1,4 +1,4 @@
-CivMoney was born out of the game Civilization. In Civilization you must be careful that your expenses for your empire are lower than your income. If you spend more than you earn you go into the red.
+[CivMoney](https://www.civmoney.com/) was born out of the game [Civilization](https://civilization.com/). In Civilization you must be careful that your expenses for your empire are lower than your income. If you spend more than you earn you go into the red.
 
 With CivMoney you can manage your income and expenses with rich visualizations showing whether you saved, lost or broke even for that day, month and year. Try to save more than you spend to stay in the green or you will end up in the red.
 
