@@ -99,7 +99,7 @@
             </div>
             <div class="row">
               <div class="col offset-9">
-                <a v-scroll-to="{ el: '#civ-money', duration: 3500 }" href="#">
+                <a v-scroll-to="{ el: '#contact', duration: 3500 }" href="#">
                   <blockquote class="blockquote text-left">
                     <footer class="blockquote time-line-title">
                       Contact Sayam
