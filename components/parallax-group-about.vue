@@ -6,7 +6,7 @@
           <div class="col-2 offset-10 mt-4 text-right">
             <span
               ><a href="#" class="tldr sh-pointer" v-on:click="toggleBioLength"
-                >click tl;dr</a
+                >tl;dr</a
               >
               About</span
             >

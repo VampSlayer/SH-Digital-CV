@@ -9,8 +9,9 @@
           >
           in 2015, with a Master’s of Physics, where his interest in programming
           started. After he graduation he enrolled in the
-          <a target="_blank" href="https://www.fdmgroup.com/">FDM</a> C# program
-          to build up his knowledge of OOP, SQL, Unix and Web.
+          <a target="_blank" href="https://www.fdmgroup.com/">FDM</a> C#
+          developer's program to build up his knowledge of OOP, SQL, Unix and
+          Web.
         </p>
         <p>
           At the end of the program, Sayam obtained a position at

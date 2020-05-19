@@ -4,7 +4,7 @@
       <div class="col-12">
         <p>
           Sayam graduated in 2015, with a Master’s of Physics. After he
-          graduated he enrolled in a C# program.
+          graduated he enrolled in a C# developer's program.
         </p>
         <p>
           At the end of the program, Sayam obtained a position as third level

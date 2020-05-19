@@ -10,9 +10,9 @@
           in 2015, with a Master’s of Physics, where modelling physical
           phenomena started his interest in programming. After he graduated he
           enrolled in the
-          <a target="_blank" href="https://www.fdmgroup.com/">FDM</a> C# program
-          to build up his knowledge of object oriented programming, specifically
-          C#, SQL, Unix and Web Development.
+          <a target="_blank" href="https://www.fdmgroup.com/">FDM</a> C#
+          developer's program to build up his knowledge of object oriented
+          programming, SQL, Unix and Web Development.
         </p>
         <p>
           At the end of the program, Sayam obtained a position as third level
