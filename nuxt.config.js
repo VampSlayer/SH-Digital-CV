@@ -65,7 +65,9 @@ module.exports = {
           }
         ]
       }
-    ]
+    ],
+    // Doc: https://www.npmjs.com/package/nuxt-compress
+    "nuxt-compress"
   ],
   /*
    ** Build configuration
