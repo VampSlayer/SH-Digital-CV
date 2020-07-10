@@ -67,7 +67,16 @@ module.exports = {
       }
     ],
     // Doc: https://www.npmjs.com/package/nuxt-compress
-    "nuxt-compress"
+    ["nuxt-compress",
+      {
+        gzip: {
+          cache: true
+        },
+        brotli: {
+          threshold: 10240
+        }
+      }
+    ]
   ],
   /*
    ** Build configuration
