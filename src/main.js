@@ -1,10 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 
-// sytles
 import "./assets/style.scss";
-import "./assets/parallax.scss";
-import "./assets/dm-mono.css";
 
 // icons
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
