@@ -3,7 +3,7 @@
     <div class="layer layer-base">
       <info-container
         :name="'Momentum Dash'"
-        :year="'2019-'"
+        :year="'2019-2022'"
         :shape="'circle'"
         :number-of-slides="3"
       >

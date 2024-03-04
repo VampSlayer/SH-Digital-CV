@@ -56,7 +56,7 @@
               <div class="col offset-6">
                 <a v-on:click="scrollTo('momentum')" href="#">
                   <blockquote class="blockquote text-left">
-                    <p class="m-0 time-line-year">2019-</p>
+                    <p class="m-0 time-line-year">2019-2022</p>
                     <footer class="blockquote-footer time-line-title">
                       <img class="logo mr-2" src="/momentum.png" />Momentum Dash
                     </footer>
