@@ -9,9 +9,7 @@
             >
           </div>
           <div class="col-1 offset-9 text-right">
-            <a v-scroll-to="{ el: '#contact', duration: 3500 }" href="#"
-              ><h4>Contact</h4></a
-            >
+            <a v-on:click="scrollTo" href="#"><h4>Contact</h4></a>
           </div>
         </div>
       </div>
@@ -44,13 +42,21 @@ export default {
     ParallaxGroupInteract,
     ParallaxGroupCreditSuisse,
     ParallaxGroupUol,
-    ParallaxGroupContact
+    ParallaxGroupContact,
   },
   data() {
     return {
-      debug: false
+      debug: false,
     };
-  }
+  },
+  methods: {
+    scrollTo() {
+      const element = document.getElementById("contact");
+      element.scrollIntoView({
+        behavior: "smooth",
+      });
+    },
+  },
 };
 </script>
 

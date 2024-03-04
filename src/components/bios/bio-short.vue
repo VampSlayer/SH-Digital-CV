@@ -9,9 +9,7 @@
         <p>
           At the end of the program, Sayam obtained a position as third level
           support at
-          <a v-scroll-to="{ el: '#credit-suisse', duration: 2500 }" href="#"
-            >Credit Suisse</a
-          >
+          <a v-on:click="scrollTo('credit-suisse')" href="#">Credit Suisse</a>
           in Zurich. He moved to Junior developer after the first year.
         </p>
       </div>
@@ -20,15 +18,12 @@
       <div class="col-10 offset-2">
         <p>
           Moving back to Manchester he became a developer at
-          <a v-scroll-to="{ el: '#interact', duration: 2000 }" href="#"
-            >Interact Software</a
-          >. Here he worked and led on two greenfield projects.
+          <a v-on:click="scrollTo('interact')" href="#">Interact Software</a>.
+          Here he worked and led on two greenfield projects.
         </p>
         <p>
           After that role Sayam moved to Canada and obtained a developer role at
-          <a v-scroll-to="{ el: '#momentum', duration: 1000 }" href="#"
-            >Momentum Dash</a
-          >.
+          <a v-on:click="scrollTo('momentum')" href="#">Momentum Dash</a>.
         </p>
       </div>
     </div>
@@ -54,6 +49,6 @@
 
 <script>
 export default {
-  name: "BioShort"
+  name: "BioShort",
 };
 </script>

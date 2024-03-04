@@ -16,16 +16,12 @@
           <div class="col-6">
             <div class="row">
               <div class="col">
-                <a v-scroll-to="{ el: '#uol', duration: 3000 }" href="#">
+                <a v-on:click="scrollTo('uol')" href="#">
                   <blockquote class="blockquote text-left">
-                    <p class="m-0 time-line-year">
-                      2015
-                    </p>
+                    <p class="m-0 time-line-year">2015</p>
                     <footer class="blockquote-footer time-line-title">
-                      <img
-                        class="logo uol mr-1"
-                        src="/uol-3.png"
-                      />University of Liverpool, MPhys
+                      <img class="logo uol mr-1" src="/uol-3.png" />University
+                      of Liverpool, MPhys
                     </footer>
                   </blockquote>
                 </a>
@@ -33,17 +29,11 @@
             </div>
             <div class="row">
               <div class="col offset-2">
-                <a
-                  v-scroll-to="{ el: '#credit-suisse', duration: 2500 }"
-                  href="#"
-                >
+                <a v-on:click="scrollTo('credit-suisse')" href="#">
                   <blockquote class="blockquote text-left">
-                    <p class="m-0 time-line-year">
-                      2015-2017
-                    </p>
+                    <p class="m-0 time-line-year">2015-2017</p>
                     <footer class="blockquote-footer time-line-title">
-                      <img class="logo mr-2" src="/credit.png" />Credit
-                      Suisse
+                      <img class="logo mr-2" src="/credit.png" />Credit Suisse
                     </footer>
                   </blockquote>
                 </a>
@@ -51,16 +41,12 @@
             </div>
             <div class="row">
               <div class="col offset-4">
-                <a v-scroll-to="{ el: '#interact', duration: 2000 }" href="#">
+                <a v-on:click="scrollTo('interact')" href="#">
                   <blockquote class="blockquote text-left">
-                    <p class="m-0 time-line-year">
-                      2018-2019
-                    </p>
+                    <p class="m-0 time-line-year">2018-2019</p>
                     <footer class="blockquote-footer time-line-title">
-                      <img
-                        class="logo mr-1"
-                        src="/interact.png"
-                      />Interact Software
+                      <img class="logo mr-1" src="/interact.png" />Interact
+                      Software
                     </footer>
                   </blockquote>
                 </a>
@@ -68,16 +54,11 @@
             </div>
             <div class="row">
               <div class="col offset-6">
-                <a v-scroll-to="{ el: '#momentum', duration: 1000 }" href="#">
+                <a v-on:click="scrollTo('momentum')" href="#">
                   <blockquote class="blockquote text-left">
-                    <p class="m-0 time-line-year">
-                      2019-
-                    </p>
+                    <p class="m-0 time-line-year">2019-</p>
                     <footer class="blockquote-footer time-line-title">
-                      <img
-                        class="logo mr-2"
-                        src="/momentum.png"
-                      />Momentum Dash
+                      <img class="logo mr-2" src="/momentum.png" />Momentum Dash
                     </footer>
                   </blockquote>
                 </a>
@@ -85,7 +66,7 @@
             </div>
             <div class="row">
               <div class="col offset-8">
-                <a v-scroll-to="{ el: '#civ-money', duration: 1500 }" href="#">
+                <a v-on:click="scrollTo('civ-money')" href="#">
                   <blockquote class="blockquote text-left">
                     <footer class="blockquote-footer time-line-title">
                       <img
@@ -99,7 +80,7 @@
             </div>
             <div class="row">
               <div class="col offset-9">
-                <a v-scroll-to="{ el: '#contact', duration: 3500 }" href="#">
+                <a v-on:click="scrollTo('contact')" href="#">
                   <blockquote class="blockquote text-left">
                     <footer class="blockquote time-line-title">
                       Contact Sayam
@@ -128,11 +109,11 @@ export default {
   components: {
     BioLong,
     BioMedium,
-    BioShort
+    BioShort,
   },
   data() {
     return {
-      bio: "long"
+      bio: "long",
     };
   },
   methods: {
@@ -145,8 +126,14 @@ export default {
         currentLengthIndex += 1;
       }
       this.bio = lengths[currentLengthIndex];
-    }
-  }
+    },
+    scrollTo(id) {
+      const element = document.getElementById(id);
+      element.scrollIntoView({
+        behavior: "smooth",
+      });
+    },
+  },
 };
 </script>
 
