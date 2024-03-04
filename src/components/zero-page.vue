@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Logo from "./logo";
+import Logo from "./logo.vue";
 export default {
   name: "ZeroPage",
   components: {

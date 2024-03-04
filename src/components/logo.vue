@@ -2,7 +2,7 @@
   <img
     :class="{ invert: invert }"
     class="logo"
-    src="~/assets/sayamhussain.webp"
+    src="/sayamhussain.webp"
   />
 </template>
 

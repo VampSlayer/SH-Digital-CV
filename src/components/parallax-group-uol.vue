@@ -15,7 +15,7 @@
             <img
               class="uol-poster sh-pointer"
               :class="{ 'uol-poster-zoom': zoomPoster }"
-              src="~/assets/uol-poster.webp"
+              src="/uol-poster.webp"
               v-on:click="zoomPoster = !zoomPoster"
             />
             <figcaption class="uol-poster-caption">
@@ -26,30 +26,26 @@
       </info-container>
     </div>
     <div class="layer layer-back">
-      <img class="uol-logo mr-2" src="~/assets/uol-3.png" />
+      <img class="uol-logo mr-2" src="/uol-3.png" />
     </div>
   </div>
 </template>
 
 <script>
 import Uol from "../assets/markdown/uol.md";
-import InfoContainer from "./info-container";
+import InfoContainer from "./info-container.vue";
 
 export default {
   name: "Uol",
   components: {
-    InfoContainer
+    InfoContainer,
+    Uol
   },
   data() {
     return {
       zoomPoster: false
     };
   },
-  computed: {
-    uol() {
-      return Uol;
-    }
-  }
 };
 </script>
 

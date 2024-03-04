@@ -27,13 +27,13 @@
 </template>
 
 <script>
-import ParallaxGroupAbout from "./parallax-group-about";
-import ParallaxGroupMomentum from "./parallax-group-momentum";
-import ParallaxGroupCivMoney from "./parallax-group-civ-money";
-import ParallaxGroupInteract from "./parallax-group-interact";
-import ParallaxGroupCreditSuisse from "./parallax-group-credit-suisse";
-import ParallaxGroupUol from "./parallax-group-uol";
-import ParallaxGroupContact from "./parallax-group-contact";
+import ParallaxGroupAbout from "./parallax-group-about.vue";
+import ParallaxGroupMomentum from "./parallax-group-momentum.vue";
+import ParallaxGroupCivMoney from "./parallax-group-civ-money.vue";
+import ParallaxGroupInteract from "./parallax-group-interact.vue";
+import ParallaxGroupCreditSuisse from "./parallax-group-credit-suisse.vue";
+import ParallaxGroupUol from "./parallax-group-uol.vue";
+import ParallaxGroupContact from "./parallax-group-contact.vue";
 
 export default {
   name: "ParallaxContainer",

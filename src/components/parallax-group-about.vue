@@ -24,7 +24,7 @@
                     <footer class="blockquote-footer time-line-title">
                       <img
                         class="logo uol mr-1"
-                        src="~/assets/uol-3.png"
+                        src="/uol-3.png"
                       />University of Liverpool, MPhys
                     </footer>
                   </blockquote>
@@ -42,7 +42,7 @@
                       2015-2017
                     </p>
                     <footer class="blockquote-footer time-line-title">
-                      <img class="logo mr-2" src="~/assets/credit.png" />Credit
+                      <img class="logo mr-2" src="/credit.png" />Credit
                       Suisse
                     </footer>
                   </blockquote>
@@ -59,7 +59,7 @@
                     <footer class="blockquote-footer time-line-title">
                       <img
                         class="logo mr-1"
-                        src="~/assets/interact.png"
+                        src="/interact.png"
                       />Interact Software
                     </footer>
                   </blockquote>
@@ -76,7 +76,7 @@
                     <footer class="blockquote-footer time-line-title">
                       <img
                         class="logo mr-2"
-                        src="~/assets/momentum.png"
+                        src="/momentum.png"
                       />Momentum Dash
                     </footer>
                   </blockquote>
@@ -90,7 +90,7 @@
                     <footer class="blockquote-footer time-line-title">
                       <img
                         class="civ-money-logo mr-2"
-                        src="~/assets/civ-money.png"
+                        src="/civ-money.png"
                       />CivMoney
                     </footer>
                   </blockquote>
@@ -119,9 +119,9 @@
 </template>
 
 <script>
-import BioLong from "./bios/bio-long";
-import BioMedium from "./bios/bio-medium";
-import BioShort from "./bios/bio-short";
+import BioLong from "./bios/bio-long.vue";
+import BioMedium from "./bios/bio-medium.vue";
+import BioShort from "./bios/bio-short.vue";
 
 export default {
   name: "About",

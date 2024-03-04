@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import ZeroPage from "../components/zero-page";
-import ParallaxContainer from "../components/parallax-container";
+import ZeroPage from "./components/zero-page.vue"
+import ParallaxContainer from "./components/parallax-container.vue"
 export default {
-  name: "Index",
+  name: "Sayam Hussain",
   components: {
     ZeroPage,
     ParallaxContainer

@@ -16,17 +16,17 @@
               <img
                 v-if="slide === 1"
                 class="momentum-pic mr-2 animated fadeIn"
-                src="../assets/pomodoro-timer.jpg"
+                src="/pomodoro-timer.jpg"
               />
               <img
                 v-if="slide === 2"
                 class="momentum-pic mr-2 animated fadeIn"
-                src="../assets/fitbit-strava-metrics.jpg"
+                src="/fitbit-strava-metrics.jpg"
               />
               <img
                 v-if="slide === 3"
                 class="momentum-pic mr-2 animated fadeIn"
-                src="../assets/microsoft-to-do-integration.jpg"
+                src="/microsoft-to-do-integration.jpg"
               />
             </a>
             <dots
@@ -43,7 +43,7 @@
     </div>
     <div class="layer layer-back">
       <div class="sh-center">
-        <img class="momentum-logo mr-2" src="~/assets/momentum.png" />
+        <img class="momentum-logo mr-2" src="/momentum.png" />
       </div>
     </div>
   </div>
@@ -51,30 +51,26 @@
 
 <script>
 import Momentum from "../assets/markdown/momentum-dash.md";
-import InfoContainer from "./info-container";
-import Dots from "./dots";
+import InfoContainer from "./info-container.vue";
+import Dots from "./dots.vue";
 
 export default {
   name: "Momentum",
   components: {
     InfoContainer,
-    Dots
+    Dots,
+    Momentum,
   },
   data() {
     return {
-      slide: 1
+      slide: 1,
     };
-  },
-  computed: {
-    momentum() {
-      return Momentum;
-    }
   },
   methods: {
     slideChange(slide) {
       this.slide = slide;
-    }
-  }
+    },
+  },
 };
 </script>
 

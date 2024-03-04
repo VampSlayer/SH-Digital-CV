@@ -17,7 +17,7 @@
             href="https://www.civmoney.com/"
           >
             <video height="640vh" width="100%" autoplay loop>
-              <source src="~/assets/civ-money.mp4" type="video/mp4" />
+              <source src="/civ-money.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </a>
@@ -26,7 +26,7 @@
     </div>
     <div class="layer layer-back">
       <div>
-        <img class="civ-money-logo mr-2" src="~/assets/civ-money.png" />
+        <img class="civ-money-logo mr-2" src="/civ-money.png" />
       </div>
     </div>
   </div>
@@ -34,18 +34,14 @@
 
 <script>
 import CivMoney from "../assets/markdown/civ-money.md";
-import InfoContainer from "./info-container";
+import InfoContainer from "./info-container.vue";
 
 export default {
   name: "CivMoney",
   components: {
-    InfoContainer
+    InfoContainer,
+    CivMoney
   },
-  computed: {
-    civMoney() {
-      return CivMoney;
-    }
-  }
 };
 </script>
 

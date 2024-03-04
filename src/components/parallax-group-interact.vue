@@ -29,25 +29,21 @@
       </info-container>
     </div>
     <div class="layer layer-back">
-      <img class="interact-logo mr-2" src="~/assets/interact.png" />
+      <img class="interact-logo mr-2" src="/interact.png" />
     </div>
   </div>
 </template>
 
 <script>
 import Interact from "../assets/markdown/interact.md";
-import InfoContainer from "./info-container";
+import InfoContainer from "./info-container.vue";
 
 export default {
   name: "Interact",
   components: {
-    InfoContainer
+    InfoContainer,
+    Interact
   },
-  computed: {
-    interact() {
-      return Interact;
-    }
-  }
 };
 </script>
 

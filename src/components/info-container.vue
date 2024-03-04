@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Dots from "./dots";
+import Dots from "./dots.vue";
 
 export default {
   name: "InfoContainer",

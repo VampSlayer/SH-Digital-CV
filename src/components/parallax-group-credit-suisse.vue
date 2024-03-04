@@ -22,25 +22,21 @@
       </info-container>
     </div>
     <div class="layer layer-back">
-      <img class="credit-suisse-logo mr-2" src="~/assets/credit.png" />
+      <img class="credit-suisse-logo mr-2" src="/credit.png" />
     </div>
   </div>
 </template>
 
 <script>
 import CreditSuisse from "../assets/markdown/credit-suisse.md";
-import InfoContainer from "./info-container";
+import InfoContainer from "./info-container.vue";
 
 export default {
   name: "CreditSuisse",
   components: {
-    InfoContainer
+    InfoContainer,
+    CreditSuisse
   },
-  computed: {
-    creditSuisse() {
-      return CreditSuisse;
-    }
-  }
 };
 </script>
 
