@@ -8,7 +8,7 @@
         :number-of-slides="3"
       >
         <template v-slot:1>
-          <div class="animated fadeIn momentum-text" v-html="momentum"></div>
+          <div class="animated fadeIn momentum-text"><MomentumMarkdown /></div>
         </template>
         <template v-slot:2>
           <div>
@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import Momentum from "../assets/markdown/momentum-dash.md";
+import MomentumMarkdown from "../assets/markdown/momentum-dash.md";
 import InfoContainer from "./info-container.vue";
 import Dots from "./dots.vue";
 
@@ -59,7 +59,7 @@ export default {
   components: {
     InfoContainer,
     Dots,
-    Momentum,
+    MomentumMarkdown,
   },
   data() {
     return {

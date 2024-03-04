@@ -8,7 +8,7 @@
         :number-of-slides="4"
       >
         <template v-slot:1>
-          <div class="animated fadeIn" v-html="interact"></div>
+          <div class="animated fadeIn"><InteractMarkdown /></div>
         </template>
         <template v-slot:2>
           <iframe
@@ -35,14 +35,14 @@
 </template>
 
 <script>
-import Interact from "../assets/markdown/interact.md";
+import InteractMarkdown from "../assets/markdown/interact.md";
 import InfoContainer from "./info-container.vue";
 
 export default {
   name: "Interact",
   components: {
     InfoContainer,
-    Interact
+    InteractMarkdown,
   },
 };
 </script>

@@ -3,11 +3,12 @@
     <a
       v-for="index in numberOfDots"
       :key="index"
-      class="mr-1"
+      class="m-1"
       href="#"
       :class="{ active: slide === index }"
       v-on:click="$emit('slide-change', index)"
-      ><font-awesome-icon :icon="['fas', shape]" />
+    >
+      <font-awesome-icon :icon="['fas', shape]" />
     </a>
   </p>
 </template>
@@ -18,21 +19,21 @@ export default {
   props: {
     numberOfDots: {
       type: Number,
-      default: 3
+      default: 3,
     },
     slide: {
       type: Number,
-      default: 1
+      default: 1,
     },
     dark: {
       type: Boolean,
-      default: false
+      default: false,
     },
     shape: {
       type: String,
-      default: "circle"
-    }
-  }
+      default: "circle",
+    },
+  },
 };
 </script>
 

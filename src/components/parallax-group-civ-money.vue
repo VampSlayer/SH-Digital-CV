@@ -8,7 +8,7 @@
         :dots-dark="true"
       >
         <template v-slot:1>
-          <div class="animated fadeIn" v-html="civMoney"></div>
+          <div class="animated fadeIn"><CivMoneyMarkdown /></div>
         </template>
         <template v-slot:2>
           <a
@@ -33,14 +33,14 @@
 </template>
 
 <script>
-import CivMoney from "../assets/markdown/civ-money.md";
+import CivMoneyMarkdown from "../assets/markdown/civ-money.md";
 import InfoContainer from "./info-container.vue";
 
 export default {
   name: "CivMoney",
   components: {
     InfoContainer,
-    CivMoney
+    CivMoneyMarkdown,
   },
 };
 </script>

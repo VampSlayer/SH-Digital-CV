@@ -9,7 +9,7 @@
         :dots-dark="true"
       >
         <template v-slot:1>
-          <div class="animated fadeIn" v-html="creditSuisse"></div>
+          <div class="animated fadeIn"><CreditSuisseMarkdown /></div>
         </template>
         <template v-slot:2>
           <iframe
@@ -28,14 +28,14 @@
 </template>
 
 <script>
-import CreditSuisse from "../assets/markdown/credit-suisse.md";
+import CreditSuisseMarkdown from "../assets/markdown/credit-suisse.md";
 import InfoContainer from "./info-container.vue";
 
 export default {
   name: "CreditSuisse",
   components: {
     InfoContainer,
-    CreditSuisse
+    CreditSuisseMarkdown,
   },
 };
 </script>

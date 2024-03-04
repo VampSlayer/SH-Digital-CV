@@ -8,7 +8,7 @@
         :number-of-slides="3"
       >
         <template v-slot:1>
-          <div class="animated fadeIn" v-html="uol"></div>
+          <div class="animated fadeIn"><UolMarkdown /></div>
         </template>
         <template v-slot:2>
           <figure class="animated fadeIn">
@@ -32,18 +32,18 @@
 </template>
 
 <script>
-import Uol from "../assets/markdown/uol.md";
+import UolMarkdown from "../assets/markdown/uol.md";
 import InfoContainer from "./info-container.vue";
 
 export default {
   name: "Uol",
   components: {
     InfoContainer,
-    Uol
+    UolMarkdown,
   },
   data() {
     return {
-      zoomPoster: false
+      zoomPoster: false,
     };
   },
 };
